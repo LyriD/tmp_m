@@ -1,0 +1,151 @@
+ru:
+  cms:
+    fortress:
+      page_title: Панель администрирования
+      title: Maniaco CMS
+      contents: Контент
+      design: Дизайн
+      admin: Admin
+      login: Вход
+      logout: Выход
+      create: Создать
+      update: Обновить
+      delete: Удалить
+      edit: Редактировать
+      are_you_sure: Вы уверены?
+      cancel: Отменить
+      published: Опубликовано
+      published_date: Дата публикации
+      schedule_date: Запланированная публикация
+      cache_timeout: Тайм-аут кэша
+      toggle_navigation: Переключить навигацию
+      image_selector: Выбрать изображение
+      insert_item: Нажмите на пресью чтобы вставить изображение в выбранную область.
+      settings: Настройки
+      current_site: Текущий сайт
+
+      admin:
+
+        dashboard:
+          title: Сводная информация (Dashboard)
+          draft_widget: Черновики
+          reviewed_widget: Подтвержденные страницы
+          updated_pages: Недавно обновленные
+
+        sites:
+          menu_header: "Сайт/ %{site_name}"
+        super_user:
+          title: Главные администраторы
+          menu_header: Расширенный доступ
+
+        users: Пользователи
+        not_authorized: У вас нет прав для доступа к данному функционалу
+        settings_dashboard: Настройки
+        roles: Роли и права доступа
+        design_dashboard: Внешний вид Dashboard
+        design_related_information: This page will show design related information.
+        content_dashboard: Виджеты Dashboard
+        content_related_information: "This page will show contents related information (history, graphs, analytics and etc.)"
+        errors:
+          missing_roles_yaml_file: "The configuration file config/roles.yml is missing."
+
+      roles:
+        title: Роли
+        new_link: Добавить роль
+        edit_title: Редактировать роль
+        new_title: Создать роль
+        back: Назад
+        load: Загрузить новые роли
+        role: Роль
+        show: Показать
+        manage: Управлять
+        save: Сохранить
+        description: Описание
+        show_access_rights: Показать права доступа
+        name: Название
+        contents: Контент
+        designs: Дизайн
+        settings: Настройки
+        files: Файлы
+        page: Страницы
+        publish: Опубликовать
+        review: Подтвердить
+        pages: Страницы
+        layouts: Шаблоны
+        snippets: Сниппеты
+        roles: Роли
+        sites: Сайты
+        users: Пользователи
+
+      users:
+        title: Пользователи
+        new_link: Добавить пользователя
+        new_super_link: Добавить главного администратора
+        edit_title: Редактировать пользователя
+        new_title: Создать пользователя
+        last_name: Фамилия
+        first_name: Имя
+        email: Email
+        role: Роль
+        sessions:
+          new:
+            sign_in: Войти
+            email_address: Email
+            password: Пароль
+            remember_me: Запомнить меня?
+
+  comfy:
+    admin:
+      cms:
+        pages:
+          form: &pages_form
+            review: Подтвердить
+            reviewed: Подтверждено
+            schedule: Дата публикации
+            scheduled: Запланированное
+            publish: Опубликовать
+            published: Опубликовано
+            draft: Сохранить как черновик
+            drafted: Черновик
+            reset: Вернуть в черновики
+
+          edit:
+            <<: *pages_form
+
+        files:
+          form:
+            are_you_sure: Вы уверены, что хотите удалить это?
+            delete: Удалить!
+
+
+  activerecord:
+    attributes:
+      cms/fortress/user:
+        last_name: Фамилия
+        first_name: Имя
+        email: Email
+        role_id: Роль
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+      cms/fortress/role:
+        name: Имя
+        description: Описание
+      cms/fortress/role_detail:
+        contents: Контент
+      comfy/cms/page:
+        full_path: Полный путь
+        parent_id: Родительская страница
+        slug: Путь
+
+  login:
+    forgot_your_password: Забыли пароль?
+    send_me_reset_password_instructions: Отправить мне инструкцию по восстановлению пароля
+    change_your_password: Изменить пароль
+    new_password: Добавить пароль
+    confirm_new_password: Подтвердить новый пароль
+    change_my_password: Изменить пароль
+    log_in: Вход
+    sign_up: Регистрация
+    didnt_receive_confirmation_instructions: Didn't receive confirmation instructions?
+    didnt_receive_unlock_instructions: Didn't receive unlock instructions?
+    sign_in_with: Войти с помощью #{provider.to_s.titleize}
