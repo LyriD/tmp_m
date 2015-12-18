@@ -1,0 +1,29 @@
+ru:
+  # Локализация модели Сервисов компании
+  activerecord:
+    models:
+      service:
+        one: сервис компании
+        few: сервисов компании
+        many: сервисов компании
+        other: сервисы компании
+    attributes:
+      service:
+        name: Название
+        url: URL
+        user: Ответственный пользователь
+        user_id: Ответственный пользователь
+        created_at: Дата создания
+        updated_at: Дата обновления
+  admin:
+    services:
+      index:
+        new: Создать
+        edit: Редактировать
+        delete: Удалить
+      show:
+        edit: Редактировать
+      edit:
+        editing: Редактирование сервиса компании
+      new:
+        creating: Создание нового сервиса компании

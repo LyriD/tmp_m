@@ -1,0 +1,21 @@
+.page-header
+  = link_to 'New Service', new_admin_service_path, :class => 'btn btn-default pull-right'
+  %h2= 'Services'
+
+= paginate @services, :theme => 'comfy'
+
+%table.table.table-hover.table-bordered
+  %tr
+    %th.main Name
+    %th.main Url
+    %th
+  - @services.each do |service|
+    %tr
+      %td.main= service.name
+      %td.main= service.url
+      %td
+        .btn-group.btn-group-sm
+          = link_to 'Edit', edit_admin_service_path(service), :class => 'btn btn-default'
+          = link_to 'Delete', admin_service_path(service), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-danger'
+
+= paginate @services, :theme => 'comfy'

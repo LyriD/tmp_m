@@ -1,0 +1,25 @@
+.page-header
+  = link_to 'New Feed Back Form Field', new_admin_feed_back_form_field_path, :class => 'btn btn-default pull-right'
+  %h2= 'Feed Back Form Fields'
+
+= paginate @feed_back_form_fields, :theme => 'comfy'
+
+%table.table.table-hover.table-bordered
+  %tr
+    %th.main Type
+    %th Feed Back Form
+    %th Required
+    %th Placeholder
+    %th
+  - @feed_back_form_fields.each do |feed_back_form_field|
+    %tr
+      %td.main= feed_back_form_field.field_type
+      %td= feed_back_form_field.feed_back_form.name
+      %td= feed_back_form_field.required
+      %td= feed_back_form_field.placeholder
+      %td
+        .btn-group.btn-group-sm
+          = link_to 'Edit', edit_admin_feed_back_form_field_path(feed_back_form_field), :class => 'btn btn-default'
+          = link_to 'Delete', admin_feed_back_form_field_path(feed_back_form_field), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-danger'
+
+= paginate @feed_back_form_fields, :theme => 'comfy'

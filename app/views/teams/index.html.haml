@@ -1,0 +1,29 @@
+.page-header
+  = link_to 'Добавить', new_admin_team_path, :class => 'btn btn-default pull-right'
+  %h2= 'Команда'
+
+-#= paginate @teams, :theme => 'comfy'
+
+%table.table.table-hover.table-bordered#sortable
+  %tr
+    %th Фото
+    %th ФИО
+    %th Должность
+    %th Краткое описание
+    %th Описание
+    %th
+  - @teams.each do |team|
+    %tr{data: {'item-id' => team.id}, class: 'item'}
+      %td= image_tag team.photo.url(:admin_thumb) if team.photo.present?
+      %td= team.name
+      %td= team.status
+      %td= truncate(team.short_desc, length: 10)
+      %td= truncate(team.desc, length: 20)
+      %td
+        .btn-group.btn-group-sm
+          = link_to 'Edit', edit_admin_team_path(team), :class => 'btn btn-default'
+          = link_to 'Delete', admin_team_path(team), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-danger'
+
+-#= paginate @teams, :theme => 'comfy'
+
+= javascript_include_tag 'comfy/admin/cms/update_team_row_order'

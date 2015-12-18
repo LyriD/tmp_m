@@ -1,0 +1,8 @@
+= form.collection_select :feed_back_form_id, @feed_back_forms, :id, :name, include_blank: true
+= form.text_field :position
+= form.collection_select :field_type, @field_types, :last, :first, selected: @field_types[@feed_back_form_field.field_type], include_blank: true
+= form.text_field :placeholder
+= form.check_box :required
+
+= form.form_group :class => 'form-actions' do
+  = form.submit :class => 'btn btn-primary'

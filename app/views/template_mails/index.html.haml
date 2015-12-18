@@ -1,0 +1,23 @@
+.page-header
+  = link_to t('.new'), new_admin_template_mail_path, class: 'btn btn-default pull-right'
+  %h2= TemplateMail.model_name.human
+
+= paginate @template_mails, theme: 'comfy'
+
+%table.table.table-hover.table-bordered
+  %tr
+    %th= TemplateMail.human_attribute_name(:name)
+    %th= TemplateMail.human_attribute_name(:period)
+    %th= TemplateMail.human_attribute_name(:theme)
+    %th
+  - @template_mails.each do |template_mail|
+    %tr
+      %td= template_mail.name
+      %td= I18n.t(template_mail.period, scope: [:activerecord, :attributes, :template_mail, :periods])
+      %td= template_mail.theme.html_safe
+      %td
+        .btn-group.btn-group-sm
+          = link_to t('.edit'), edit_admin_template_mail_path(template_mail), class: 'btn btn-default'
+          = link_to t('.delete'), admin_template_mail_path(template_mail), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
+
+= paginate @template_mails, theme: 'comfy'

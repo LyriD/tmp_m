@@ -1,0 +1,32 @@
+ru:
+  # Локализация модели Учредителей
+  activerecord:
+    models:
+      template_mail:
+        one: шаблон письма
+        few: шаблон писем
+        many: шаблон писем
+        other: шаблоны писем
+    attributes:
+      template_mail:
+        name: Наименование
+        theme: Тема письма
+        period: Период рассылки
+        body: Тело письма
+        bcc: Скрытая копия
+        periods:
+          month: За месяц
+          week: За неделю
+          after: После окончания
+  admin:
+    template_mails:
+      index:
+        new: Создать новый шаблон
+        edit: Редактировать
+        delete: Удалить
+      show:
+        edit: Редактировать
+      edit:
+        editing: Редактирование шаблона
+      new:
+        creating: Создание нового шаблона

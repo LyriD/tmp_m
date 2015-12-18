@@ -1,0 +1,7 @@
+.page-header
+  %h2= "#{TemplateMail.model_name.human} - #{@template_mail.name}"
+  %p= @template_mail.theme.html_safe
+  .content
+    = @template_mail.body.html_safe
+.btn-group.btn-group-sm
+  = link_to t('.edit'), edit_admin_template_mail_path(@template_mail), class: 'btn btn-default'

@@ -4,7 +4,26 @@ Rails.application.routes.draw do
   comfy_route :cms_admin, :path => '/cms-admin'
 
   # Make sure this routeset is defined last
-  comfy_route :cms, :path => '/', :sitemap => false
+  comfy_route :cms, :path => '/', :sitemap => true
+
+  namespace :admin do
+    resources :services
+    resources :feedbacks
+    resources :feed_back_forms
+    resources :feed_back_form_fields
+    resources :template_mails do
+      get 'offerings', defaults: { format: 'json' }
+      post 'send_mail', on: :member
+    end
+    resources :teams do
+      post :update_row_order, on: :collection
+    end
+  end
+
+  comfy_route :blog_admin, :path => '/admin'
+  comfy_route :blog, :path => '/articles'
+  comfy_route :cms_admin, :path => '/admin'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

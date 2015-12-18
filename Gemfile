@@ -46,3 +46,21 @@ group :development do
 end
 
 gem 'cms-fortress', '~> 1.3.12'
+gem 'comfy_blog', '~> 1.12.0'
+
+gem 'kaminari'
+gem 'select2-rails'
+# gem 'liquid'
+# gem 'whenever', require: false
+gem 'maskedinput-rails'
+gem 'paperclip'
+# gem 'slim-rails'
+# gem 'less-rails', '~> 2.7.0'
+
+# gem 'compass-rails'
+# gem 'compass-normalize'
+# gem 'autoprefixer-rails'
+
+gem 'quiet_assets'
+gem 'acts_as_list'
+gem "non-stupid-digest-assets"

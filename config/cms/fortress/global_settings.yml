@@ -1,5 +1,5 @@
 default: &default
-  title: "CMS Fortress"
+  title: "ManiacoCMS demo"
   title_link: "#"
   use_tinymce: true
 

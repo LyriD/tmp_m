@@ -1,0 +1,4 @@
+ru:
+  feedback_mailer:
+    send_notification:
+      subject: Обратная связь

@@ -31,4 +31,25 @@ Cms::Fortress.configure do |config|
   #   path:  'admin_my_role_details_path'
   # }
 
+  config.content_resources << {
+      name: 'template_mails',
+      title: 'Шаблоны писем',
+      path:  'admin_template_mails_path'
+  }
+  config.content_resources << {
+      name: 'feedbacks',
+      title: 'Сообщения обратной связи',
+      path:  'admin_feedbacks_path'
+  }
+  config.content_resources << {
+      name: 'feed_back_forms',
+      title: 'Формы обратной связи',
+      path:  'admin_feed_back_forms_path'
+  }
+  config.content_resources << {
+      name: 'feed_back_form_fields',
+      title: 'Элементы формы обратной связи',
+      path:  'admin_feed_back_form_fields_path'
+  }
+
 end

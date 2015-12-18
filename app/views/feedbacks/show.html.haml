@@ -1,0 +1,12 @@
+.page-header
+  %h2 Feedback
+  %h3 Для проекта #{@feedback.service_name}
+
+%dl.dl-horizontal
+  - @feedback.attributes.each do |name, value|
+    - next unless value.present?
+    %dt= name
+    %dd= value
+  - if @feedback.file.present?
+    %dt file
+    %dd= link_to @feedback.file_file_name, @feedback.file.url

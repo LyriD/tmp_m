@@ -1,0 +1,9 @@
+= form.text_field :name
+= form.text_field :status
+= image_tag form.object.photo.url(:admin_thumb) if form.object.photo.present?
+= form.file_field :photo
+= form.text_area :short_desc
+= form.text_area :desc
+
+= form.form_group :class => 'form-actions' do
+  = form.submit :class => 'btn btn-primary'

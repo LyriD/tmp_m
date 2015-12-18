@@ -1,0 +1,13 @@
+= form.form_group class: 'form-actions' do
+  .form-group
+    .col-sm-3.col-sm-offset-9.send-email-button
+      - if form.object.persisted?
+        = link_to 'Принудительно отправить', send_mail_admin_template_mail_path(form.object), class: 'btn btn-danger', method: :post
+  = form.text_field :name
+  - collection_select_collection = TemplateMail.periods.map{ |name, _| [I18n.t(name, scope: [:activerecord, :attributes, :template_mail, :periods]), name] }
+  = form.collection_select :period, collection_select_collection, :last, :first, include_blank: true
+  = form.text_field :bcc
+  = form.text_area :theme, class: 'mail-text-editor'
+  = form.text_area :body, class: 'mail-text-editor'
+  = form.collection_select :offerings, selectize_offering_collection, :last, :first, { include_blank: true, selected: form.object.offerings.pluck(:offering_id) }, { multiple: true }
+  = form.submit class: 'btn btn-primary'

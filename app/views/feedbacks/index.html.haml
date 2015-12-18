@@ -1,0 +1,51 @@
+.page-header
+  = link_to 'New Feedback', new_admin_feedback_path, :class => 'btn btn-default pull-right'
+  %h2= 'Feedbacks'
+
+= paginate @feedbacks, :theme => 'comfy'
+
+%table.table.table-hover.table-bordered
+  %tr
+    %th.main Theme
+    %th Name
+    %th Email
+    %th Invoice Number
+    %th Company Name
+    %th General Manager
+    %th Legal Address
+    %th Fact Address
+    %th Mail Address
+    %th Inn
+    %th Kpp
+    %th Phone
+    %th Bank Name
+    %th Bic
+    %th Correspondent Account
+    %th Checking Account
+    %th Body
+    %th
+  - @feedbacks.each do |feedback|
+    %tr
+      %td.main= feedback.theme
+      %td= feedback.client_name
+      %td= feedback.email
+      %td= feedback.invoice_number
+      %td= feedback.company_name
+      %td= feedback.general_manager
+      %td= feedback.legal_address
+      %td= feedback.fact_address
+      %td= feedback.mail_address
+      %td= feedback.inn
+      %td= feedback.kpp
+      %td= feedback.phone
+      %td= feedback.bank_name
+      %td= feedback.bic
+      %td= feedback.correspondent_account
+      %td= feedback.checking_account
+      %td= feedback.body
+      %td
+        .btn-group.btn-group-sm
+          = link_to 'Просмотр', admin_feedback_path(feedback), :class => 'btn btn-default'
+          = link_to 'Delete', admin_feedback_path(feedback), :method => :delete, :data => { :confirm => 'Are you sure?' }, :class => 'btn btn-danger'
+
+= paginate @feedbacks, :theme => 'comfy'

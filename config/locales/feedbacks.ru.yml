@@ -1,0 +1,41 @@
+ru:
+  # Локализация модели Обратной связи
+  activerecord:
+    models:
+      feedback:
+        one: сообщение обратной связи
+        few: сообщение обратной связи
+        many: сообщение обратной связи
+        other: сообщение обратной связи
+    attributes:
+      feedback:
+        theme: Тема
+        client_name: Имя
+        email: Email
+        invoice_number: Номер оплаченного заказа\счета
+        company_name: Полное наименование компании
+        general_manager: Генеральный директор
+        legal_address: Юридический адрес
+        fact_address: Фактический адрес
+        mail_address: Адрес для доставки документов
+        inn: ИНН
+        kpp: КПП
+        phone: Телефон/факс по фактическому адресу
+        bank_name: Полное наименование банка
+        bic: БИК
+        correspondent_account: К/с
+        checking_account: Р/с
+        body: Текст сообщения
+        file: Файл
+  admin:
+    feedbacks:
+      index:
+        new: Создать новый шаблон
+        edit: Редактировать
+        delete: Удалить
+      show:
+        edit: Редактировать
+      edit:
+        editing: Редактирование шаблона
+      new:
+        creating: Создание нового шаблона

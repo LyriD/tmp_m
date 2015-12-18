@@ -4,6 +4,10 @@ contents:
   - page.review
   - page.publish
   - page.draft
+  - template_mails
+  - services
+  - feed_back_forms
+  - feed_back_form_fields
 designs:
   - layouts
   - snippets

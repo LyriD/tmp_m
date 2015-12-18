@@ -1,0 +1,6 @@
+= form.text_field :name
+= form.text_field :url
+= form.collection_select :user_id, @users, :id, :full_name, include_blank: true
+
+= form.form_group :class => 'form-actions' do
+  = form.submit :class => 'btn btn-primary'
