@@ -1,0 +1,8 @@
+<% config = Cms::Fortress::Settings.new(:global_settings).to_h %>
+
+//= require '../site_selector'
+//= require '../custom'
+$(document).ready( function() {
+  $('.dropdown-toggle').dropdown();
+});
+
