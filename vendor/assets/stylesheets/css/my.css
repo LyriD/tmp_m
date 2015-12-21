@@ -1,0 +1,85 @@
+/* font-family: "SourceSansProRegular"; */
+@font-face {
+    font-family: "SourceSansProRegular";
+    src: url("/assets/fonts/SourceSansProRegular/SourceSansProRegular.eot");
+    src: url("/assets/fonts/SourceSansProRegular/SourceSansProRegular.eot?#iefix")format("embedded-opentype"),
+    url("/assets/fonts/SourceSansProRegular/SourceSansProRegular.woff") format("woff"),
+    url("/assets/fonts/SourceSansProRegular/SourceSansProRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "SourceSansProLight"; */
+@font-face {
+    font-family: "SourceSansProLight";
+    src: url("/assets/fonts/SourceSansProLight/SourceSansProLight.eot");
+    src: url("/assets/fonts/SourceSansProLight/SourceSansProLight.eot?#iefix")format("embedded-opentype"),
+    url("/assets/fonts/SourceSansProLight/SourceSansProLight.woff") format("woff"),
+    url("/assets/fonts/SourceSansProLight/SourceSansProLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "SourceSansProBold"; */
+@font-face {
+    font-family: "SourceSansProBold";
+    src: url("/assets/fonts/SourceSansProBold/SourceSansProBold.eot");
+    src: url("/assets/fonts/SourceSansProBold/SourceSansProBold.eot?#iefix")format("embedded-opentype"),
+    url("/assets/fonts/SourceSansProBold/SourceSansProBold.woff") format("woff"),
+    url("/assets/fonts/SourceSansProBold/SourceSansProBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+
+.postulats {
+    color: #fff;
+    font-size: 63px;
+    font-weight: 900;
+    margin: 0 80px 0 0;
+    line-height: 1.05;
+}
+
+.base_postulats {
+    text-align: center;
+}
+
+.base_postulats > h3 {
+    line-height: 1.05;
+    font-size: 28px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+
+.rational {
+    text-align: center;
+}
+.rational > h1 {
+    color: #fff;
+    font-size: 46px;
+    margin-top: 130px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.options > div > form > ul > li {
+    padding-bottom: 30px;
+}
+.options > div > form > ul {
+    float: right;
+    list-style-type: none;
+
+}
+
+.figur {
+
+}
+
+.figur > img {
+    display: inline-block;
+}
+
+.figur > h3 {
+    display: inline-block;
+    padding-left: 16px;
+}
