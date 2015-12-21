@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  comfy_route :blog_admin, :path => '/admin'
+  comfy_route :blog, :path => '/blog'
+
   cms_fortress_routes :path => '/cms-admin'
 
   comfy_route :cms_admin, :path => '/cms-admin'

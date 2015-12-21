@@ -1,149 +1,396 @@
+# encoding: utf-8
+
 en:
   cms:
     fortress:
-      page_title: CMS Fortress Admin
-      title: CMS Fortress
-      contents: Contents
-      design: Design
+      page_title: Панель администрирования
+      title: Maniaco CMS
+      contents: Контент
+      design: Дизайн
       admin: Admin
-      login: Logout
-      logout: Logout
-      create: Create
-      update: Update
-      delete: Delete
-      edit: Edit
-      are_you_sure: Are you sure?
-      cancel: Cancel
-      published: Published
-      published_date: Published At
-      schedule_date: Scheduled Publication
-      cache_timeout: Cached Timeout
-      toggle_navigation: Toggle Navigation
-      image_selector: Image Selector
-      insert_item: Click the thumbnail to insert item to the selected editor.
-      settings: Settings
-      current_site: Current Site
+      login: Вход
+      logout: Выход
+      create: Создать
+      update: Обновить
+      delete: Удалить
+      edit: Редактировать
+      are_you_sure: Вы уверены?
+      cancel: Отменить
+      published: Опубликовано
+      published_date: Дата публикации
+      schedule_date: Запланированная публикация
+      cache_timeout: Тайм-аут кэша
+      toggle_navigation: Переключить навигацию
+      image_selector: Выбрать изображение
+      insert_item: Нажмите на пресью чтобы вставить изображение в выбранную область.
+      settings: Настройки
+      current_site: Текущий сайт
 
       admin:
 
         dashboard:
           title: Dashboard
-          draft_widget: Draft Pages
-          reviewed_widget: Reviewed Pages
-          updated_pages: Recently Updated Pages
+          draft_widget: Черновики
+          reviewed_widget: Подтвержденные страницы
+          updated_pages: Недавно обновленные
 
         sites:
-          menu_header: "Site/ %{site_name}"
+          menu_header: "Сайт/ %{site_name}"
         super_user:
-          title: Super Users
-          menu_header: Super Users Only
+          title: Главные администраторы
+          menu_header: Расширенный доступ
 
-        users: Users
-        not_authorized: You are not authorized to access this functionality
-        settings_dashboard: Settings Dashboard
-        roles: Roles
-        design_dashboard: Design Dashboard
+        users: Пользователи
+        not_authorized: У вас нет прав для доступа к данному функционалу
+        settings_dashboard: Настройки Dashboard
+        roles: Роли и права доступа
+        design_dashboard: Внешний вид Dashboard
         design_related_information: This page will show design related information.
-        content_dashboard: Content Dashboard
+        content_dashboard: Виджеты Dashboard
         content_related_information: "This page will show contents related information (history, graphs, analytics and etc.)"
         errors:
           missing_roles_yaml_file: "The configuration file config/roles.yml is missing."
 
       roles:
-        title: Roles
-        new_link: New Role
-        edit_title: Edit Role
-        new_title: Create New Role
-        back: Back
-        load: Load New Roles
-        role: Role
-        show: Show
-        manage: Manage
-        save: Save
-        description: Description
-        show_access_rights: Show Access Rights
-        name: Name
-        contents: Contents
-        designs: Designs
-        settings: Settings
-        files: Files
-        page: Page
-        publish: publish
-        review: review
-        pages: Pages
-        layouts: Layouts
-        snippets: Snippets
-        roles: Roles
-        sites: Sites
-        users: Users
+        title: Роли
+        new_link: Добавить роль
+        edit_title: Редактировать роль
+        new_title: Создать роль
+        back: Назад
+        load: Загрузить новые роли
+        role: Роль
+        show: Показать
+        manage: Управлять
+        save: Сохранить
+        description: Описание
+        show_access_rights: Показать права доступа
+        name: Название
+        contents: Контент
+        designs: Дизайн
+        settings: Настройки
+        files: Файлы
+        page: Страницы
+        publish: Опубликовать
+        review: Подтвердить
+        pages: Страницы
+        layouts: Шаблоны
+        snippets: Сниппеты
+        roles: Роли
+        sites: Сайты
+        users: Пользователи
 
       users:
-        title: Users
-        new_link: New User
-        new_super_link: New Super User
-        edit_title: Edit User
-        new_title: Create New User
-        last_name: Lastname
-        first_name: Firstname
+        title: Пользователи
+        new_link: Добавить пользователя
+        new_super_link: Добавить главного администратора
+        edit_title: Редактировать пользователя
+        new_title: Создать пользователя
+        last_name: Фамилия
+        first_name: Имя
         email: Email
-        role: Role
+        role: Роль
         sessions:
           new:
-            sign_in: Sign In
-            email_address: Email Address
-            password: Password
-            remember_me: Remember me
+            sign_in: Войти
+            email_address: Email
+            password: Пароль
+            remember_me: Запомнить меня?
 
   comfy:
     admin:
       cms:
         pages:
           form: &pages_form
-            review: Approve
-            reviewed: Reviewed
-            schedule: Publish Date
-            scheduled: Scheduled
-            publish: Publish Now
-            published: Published
-            draft: save as draft
-            drafted: Draft
-            reset: Reset to Draft
+            review: Подтвердить
+            reviewed: Подтверждено
+            schedule: Дата публикации
+            scheduled: Запланированное
+            publish: Опубликовать
+            published: Опубликовано
+            draft: Сохранить как черновик
+            drafted: Черновик
+            reset: Вернуть в черновики
 
           edit:
             <<: *pages_form
 
         files:
           form:
-            are_you_sure: Are you sure to delete?
-            delete: Delete!
+            are_you_sure: Вы уверены, что хотите удалить это?
+            delete: Удалить!
+
 
   activerecord:
     attributes:
       cms/fortress/user:
-        last_name: Lastname
-        first_name: Firstname
+        last_name: Фамилия
+        first_name: Имя
         email: Email
-        role_id: Role
-        password: Password
-        password_confirmation: Password Confirmation
+        role_id: Роль
+        password: Пароль
+        password_confirmation: Подтверждение пароля
       cms/fortress/role:
-        name: Name
-        description: Description
+        name: Имя
+        description: Описание
       cms/fortress/role_detail:
-        contents: Contents
+        contents: Контент
       comfy/cms/page:
-        full_path: Path
-        parent_id: Parent page
-        slug: Slug
+        full_path: Полный путь
+        parent_id: Родительская страница
+        slug: Путь
+
   login:
-    forgot_your_password: Forgot your password?
-    send_me_reset_password_instructions: Send me reset password instructions
-    change_your_password: Change your password
-    new_password: New password
-    confirm_new_password: Confirm new password
-    change_my_password: Change my password
-    log_in: Log in
-    sign_up: Sign up
+    forgot_your_password: Забыли пароль?
+    send_me_reset_password_instructions: Отправить мне инструкцию по восстановлению пароля
+    change_your_password: Изменить пароль
+    new_password: Добавить пароль
+    confirm_new_password: Подтвердить новый пароль
+    change_my_password: Изменить пароль
+    log_in: Вход
+    sign_up: Регистрация
     didnt_receive_confirmation_instructions: Didn't receive confirmation instructions?
     didnt_receive_unlock_instructions: Didn't receive unlock instructions?
-    sign_in_with: Sign in with #{provider.to_s.titleize}
+    sign_in_with: Войти с помощью #{provider.to_s.titleize}
+
+  activerecord:
+    models:
+      comfy/cms/site: Сайт
+      comfy/cms/layout: Шаблон
+      comfy/cms/page: Страница
+      comfy/cms/snippet: Сниппет
+      comfy/cms/file: Файл
+
+    attributes:
+      comfy/cms/site:
+        identifier: Идентификатор
+        label: Название
+        hostname: Имя хоста
+        path: Путь
+        locale: Язык
+        is_mirrored: Синхронизирован с другими сайтами
+      comfy/cms/layout:
+        identifier: Идентификатор
+        label: Название шаблона
+        app_layout: Шаблон приложения
+        parent_id: Родительский шаблон
+        content: Контент
+        css: CSS
+        js: Javascript
+      comfy/cms/page:
+        label: Название
+        layout_id: Шаблон
+        parent_id: Родительская страница
+        full_path: Полный путь
+        slug: Ссылка
+        target_page_id: Редирект на страницу
+        content: Контент
+        is_published: Опубликована
+      comfy/cms/file:
+        label: Название
+        file: Файл
+        description: Описание
+      comfy/cms/snippet:
+        identifier: Идентификатор
+        label: Название
+        content: Контент
+
+  comfy:
+    cms:
+      content:
+        site_not_found: Сайт не найден
+        layout_not_found: Шаблон не найден
+        page_not_found: Страница не найдена
+
+    admin:
+      cms:
+        base:
+          site_not_found: Сайт не найден
+          fixtures_enabled: CMS Fixtures включены. Все изменения, сделанные здесь, будут отменены.
+
+          sites: Сайты
+          layouts: Шаблоны
+          pages: Страницы
+          snippets: Сниппеты
+          files: Файлы
+
+        sites:
+          created: Сайт создан
+          creation_failure: Не удалось создать сайт
+          updated: Сайт обновлен
+          update_failure: Не удалось обновить сайт
+          deleted: Сайт удален
+          not_found: Сайт не найден
+
+          index:
+            title: Сайты
+            new_link: Создать новый сайт
+            select: Выбрать сайт
+            edit: Редактировать
+            delete: Удалить
+            are_you_sure: Вы уверены, что хотите удалить этот сайт?
+          new:
+            title: Новый сайт
+          edit:
+            title: Редактирование сайта
+          form:
+            create: Создать сайт
+            cancel: Oтменить
+            update: Обновить сайт
+            is_mirrored: Синхронизирован с другими сайтами
+
+        layouts:
+          created: Шаблон создан
+          creation_failure: Не удалось создать шаблон
+          updated: Шаблон обновлен
+          update_failure: Не удалось обновить шаблон
+          deleted: Шаблон удален
+          not_found: Шаблон не найден
+
+          index:
+            title: Шаблоны
+            new_link: Создать новый шаблон
+          index_branch:
+            add_child_layout: Добавить дочерний шаблон
+            edit: Редактировать
+            delete: Удалить
+            are_you_sure: Вы уверены?
+          new:
+            title: Новый шаблон
+          edit:
+            title: Редактирование шаблона
+            revision: &revision
+              zero: 'Нет Ревизий'
+              one: '%{count} Ревизия'
+              few: '%{count} Ревизии'
+              many: '%{count} Ревизий'
+              other: '%{count} Ревизии'
+          form:
+            select_parent_layout: Выбрать родительский шаблон
+            select_app_layout: Выбрать шаблон приложения
+            create: Создать шаблон
+            cancel: Oтменить
+            update: Обновить шаблон
+
+        pages:
+          created: Страница создана
+          creation_failure: Не удалось создать страницу
+          updated: Страница обновлена
+          update_failure: Не удалось обновить страницу
+          deleted: Страница удалена
+          not_found: Страница не найдена
+          layout_not_found: Шаблоны не найдены. Пожалуйста, создайте хотя бы один шаблон.
+
+          index:
+            title: Страницы
+            new_link: Создать новую страницу
+          index_branch:
+            toggle: Toggle
+            add_child_page: Добавить дочернюю страницу
+            edit: Редактировать
+            delete: Удалить
+            are_you_sure: Вы уверены?
+          new:
+            title: Новая страница
+          edit:
+            title: Редактирование страницы
+            revision:
+              <<: *revision
+          form:
+            select_target_page: Без редиректа
+            preview: Предпросмотр
+            create: Создать страницу
+            cancel: Oтменить
+            update: Обновить страницу
+            is_published: Опубликована
+            choose_link: Select page...
+          form_blocks:
+            no_tags: |-
+              Шаблон не содержит ни одного контент-тега.<br/>
+              Отредактируйте контент, вставив тег страницы или поля. Например: <code>{{cms:page:content}}</code>
+
+        snippets:
+          created: Сниппет создан
+          creation_failure: Не удалось создать сниппет
+          updated: Сниппет обновлен
+          update_failure: Не удалось обновить сниппет
+          deleted: Сниппет удален
+          not_found: Сниппет не найден
+
+          index:
+            title: Сниппеты
+            new_link: Создать новый сниппет
+            edit: Редактировать
+            delete: Удалить
+            are_you_sure: Вы уверены?
+          new:
+            title: Новый сниппет
+          edit:
+            title: Редактирование сниппета
+            revision:
+              <<: *revision
+          form:
+            create: Создать сниппет
+            cancel: Oтменить
+            update: Обновить сниппет
+
+        revisions:
+          reverted: Контент возвращен в прежнее состояние
+          record_not_found: Запись не найдена
+          not_found: Ревизия не найдена
+
+          show:
+            title: Ревизии для
+            revision: Ревизия
+            full_path: Полный путь
+            slug: Ссылка
+            update: Обновить до этой ревизии
+            content: Content
+            changes: Changes
+            previous: Previous
+            current: Текущая
+
+        files:
+          created: Файлы загружены
+          creation_failure: Не удалось загрузить файлы
+          updated: Файл обновлен
+          update_failure: Не удалось обновить файл
+          deleted: Файл удален
+          not_found: Файл не найден
+
+          index:
+            title: Файлы
+            new_link: Загрузить новый файл
+            edit: Редактировать
+            delete: Удалить
+            are_you_sure: Вы уверены?
+            button: Загрузить файлы
+          new:
+            title: Новый файл
+          edit:
+            title: Редактирование файла
+          form:
+            current_file: Текущий файл
+            create: Загрузить файл
+            cancel: Oтменить
+            update: Обновить файл
+            delete: Удалить
+            are_you_sure: Вы уверены?
+          page_form:
+            are_you_sure: Вы уверены?
+          file:
+            are_you_sure: Вы уверены?
+
+        categories:
+          index:
+            label: Категории
+            edit: Редактировать
+            done: Применить
+            all: Все
+            add: Добавить
+            add_placeholder: добавить категорию
+          show:
+            are_you_sure: Вы уверены?
+          edit:
+            save: Сохранить
+          form:
+            label: Категории
