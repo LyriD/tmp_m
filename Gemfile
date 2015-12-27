@@ -64,3 +64,9 @@ gem 'paperclip'
 gem 'quiet_assets'
 gem 'acts_as_list'
 gem "non-stupid-digest-assets"
+
+
+gem 'capistrano', '~> 3.4.0'
+gem 'rvm-capistrano'
+gem 'capistrano-bundler'
+gem 'capistrano-rails'
